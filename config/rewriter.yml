@@ -1,0 +1,14 @@
+rewriter:
+  host:
+    - matcher: ^m[a-z]*\.yahoo.com
+      replacement: www.yahoo.com
+    - matcher: m[a-z]*\.([a-z0-9\-\.]*yahoo.com)
+      replacement: \1
+  link:
+    host: m(?<prefix>[a-z]*)\.[a-z0-9\-\.]*yahoo.com
+    matcher: (^|\/\/|\"|\')(?!m$prefix\.)(www\.)?([a-z0-9\-\.]*)yahoo.com
+    replacement: \1m$prefix.\3yahoo.com
+  cookie_domain:
+    matcher: \.?(www\.)?([a-z0-9\-\.]*(yahoo.com))
+    replacement: .\3
+    missing_replacement: .yahoo.com

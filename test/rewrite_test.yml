@@ -1,0 +1,71 @@
+
+host:
+  - test: m.yahoo.com
+    expected: www.yahoo.com
+  - test: m.yahoo.com
+    expected: www.yahoo.com
+  - test: m.product.yahoo.com
+    expected: product.yahoo.com
+  - test: m.www1.yahoo.com
+    expected: www1.yahoo.com
+  - test: mlocal.yahoo.com
+    expected: www.yahoo.com
+  - test: mstage.yahoo.com
+    expected: www.yahoo.com
+  - test: mlocal.smartphone.yahoo.com
+    expected: smartphone.yahoo.com
+  - test: mstage.mconfig.yahoo.com
+    expected: mconfig.yahoo.com
+link:
+  - host: m.yahoo.com
+    test: www.yahoo.com
+    expected: m.yahoo.com
+  - host: m.yahoo.com
+    test: yahoo.com
+    expected: m.yahoo.com
+  - host: m.burma.yahoo.com
+    test: thailand.yahoo.com
+    expected: m.thailand.yahoo.com
+  - host: m.yahoo.com
+    test: pipeline.yahoo.com
+    expected: m.pipeline.yahoo.com
+  - host: m.yahoo.com
+    test: magic.yahoo.com
+    expected: m.magic.yahoo.com
+  - host: mlocal.yahoo.com
+    test: www.yahoo.com
+    expected: mlocal.yahoo.com
+  - host: m.yahoo.com
+    test: http://yahoo.com/location?x=y
+    expected: http://m.yahoo.com/location?x=y
+  - host: m.smartphone.yahoo.com
+    test: http://smartphone.yahoo.com
+    expected: http://m.smartphone.yahoo.com
+  - host: mstage.mconfig.yahoo.com
+    test: http://smartphone.yahoo.com
+    expected: http://mstage.smartphone.yahoo.com
+  - host: m.mconfig.yahoo.com
+    test: http://mconfig.yahoo.com/loc?x=y
+    expected: http://m.mconfig.yahoo.com/loc?x=y
+
+
+cookie_domain:
+  - host: m.yahoo.com
+    test: .yahoo.com
+    expected: .yahoo.com
+  - host: mlocal.yahoo.com
+    test: .yahoo.com
+    expected: .yahoo.com
+  - host: m.yahoo.com
+    test: www.yahoo.com
+    expected: .yahoo.com
+  - host: m.yahoo.com
+    test: muay.yahoo.com
+    expected: .yahoo.com
+  - host: m.yahoo.com
+    test: .thai.yahoo.com
+    expected: .yahoo.com
+  - host: m.yahoo.com
+    test: 
+    expected: .yahoo.com
+

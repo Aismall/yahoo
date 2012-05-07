@@ -1,0 +1,12 @@
+
+// Place holder/example file
+.temp {
+  padding: 10px;
+  margin: 10px;
+  display: block;
+  border: 1px solid #ddd;
+  width: 100px!important;
+  background: white;
+  @include border-radius(10px);
+  @include box-shadow(2px 2px 2px #333);
+}
